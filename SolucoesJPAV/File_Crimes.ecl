@@ -25,6 +25,6 @@ EXPORT File_Crimes := MODULE
         STRING40 Location;
     END;
 
-    EXPORT File := DATASET('~class::jpav::cityofchicago::crimes_-_2001_to_present.csv', Layout, CSV);
+    EXPORT File := DATASET('~class::jpav::cityofchicago::crimes_-_2001_to_present.csv', Layout, CSV (heading(1)));
 
 END;
