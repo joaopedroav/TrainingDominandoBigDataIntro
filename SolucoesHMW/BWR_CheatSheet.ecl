@@ -10,7 +10,7 @@ OUTPUT('Olá mundo');
 // *****
 // Estruturas de dados basicas em ECL
 // Estrutura RECORD
-/*
+
 rec := RECORD
   STRING10  Firstname;
 	STRING    Lastname;
@@ -28,7 +28,7 @@ ds := DATASET([{'Alysson','Oliveira','M',26,100,1000.50},
 							 {'Odair','Ferreira','M',66,350,6000},
 							 {'Orlando','Silva','U',67,300,4000}],rec);
 OUTPUT(ds);
-*/
+
 // *****
 // Filtragem e tabulaçao de datasets
 // recset := ds(Age<65);
@@ -60,19 +60,19 @@ OUTPUT(ds);
 // *****
 // Transformacoes basicas em ECL
 // Eliminacao de campos desnecessarios
-// tbl := TABLE(ds,{Firstname,LastName,Income});
-// tbl;
+tbl := TABLE(ds,{Firstname,LastName,Income});
+tbl;
 
 // Ordenacao de valores
-// sortbl := SORT(tbl,LastName);
-// sortbl;
+sortbl := SORT(tbl,LastName);
+sortbl;
 
 // Remocao de duplicidades
-// dedptbl := DEDUP(sortbl,LastName);
-// dedptbl;
+dedptbl := DEDUP(sortbl,LastName);
+dedptbl;
 
 // Adicao de campo no dataset
-/*rec2 := RECORD
+rec2 := RECORD
   UNSIGNED   recid;  
 	STRING10   Firstname;
 	STRING     Lastname;
@@ -94,12 +94,12 @@ newds := PROJECT(ds,MyTransf(LEFT,COUNTER));
 
 newds;
 
-rec3 := RECORD
-  STRING10  Firstname;
-	STRING    Lastname;
-	STRING    Email;
-END;
-*/
+// rec3 := RECORD
+//   STRING10  Firstname;
+// 	STRING    Lastname;
+// 	STRING    Email;
+// END;
+
 // Declaracao DATASET
 /*
 ds2 := DATASET([{'ALYSSON','OLIVEIRA','alysson.oliveira@gmail.com'},
