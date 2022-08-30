@@ -1,7 +1,7 @@
 EXPORT File_Crimes := MODULE
 
     EXPORT Layout := RECORD
-        STRING ID;
+        STRING8 ID;
         STRING11 CaseNumber;
         STRING22 Date;
         STRING38 Block;
